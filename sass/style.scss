@@ -13,7 +13,9 @@ $background: #F6F6F6;
     background: linear-gradient(180deg, $secondary, $primary);
     padding: 20px;
     border-radius: 10rem;
+    border: hidden;
     box-shadow: 0 5px 10px #C3C3C3;
+    cursor: pointer;
 }
 @mixin new {
     background: $tertiary;
@@ -65,8 +67,15 @@ h2 {
 .title {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
     padding: 17px 0;
+    .arrow {
+        position: absolute;
+        left: 20px;
+        font-size: 23px;
+        color: #232323;
+    }
 }
 
 .adress {
@@ -168,8 +177,72 @@ h2 {
         font-size: 23px;
     }
 }
+.visuel {
+    img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 257px;
+    }
+    .name {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 40px;
+        height: 76px;
+        margin-top: -38px;
+        border-radius: 38px 38px 0 0;
+        background-color: $background;
+        i {
+            font-size: 23px;
+        }
 
-
+    }
+}
+.menus {
+    padding: 14px;
+    background-color: $background;
+    .menu {
+        margin-bottom: 20px;
+        &_titre {
+            max-width: 100%;
+            padding-left: 6px;
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+    }
+    .barre {
+        width: 40px;
+        height: 3px;
+        background-color: $tertiary;
+        margin: 9px 0 9px 6px;
+    }
+    .choix {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 22px 15px 10px;
+        border-radius: 13px;
+        background-color: white;
+        box-shadow: 1px 5px 5px #E6E6E6;
+        margin-bottom: 14px;
+    }
+    .price {
+        display: flex;
+        align-self: flex-end;
+    }
+    .check {
+        display: none;
+    }
+    .pb {
+        display: flex;
+        justify-content: center;
+    }
+    .pink_button {
+        @include pinkb;
+        width: 50%;
+    }
+}
 /*footer*/
 
 footer {

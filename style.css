@@ -42,8 +42,15 @@ h2 {
 .title {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: auto;
   padding: 17px 0;
+}
+.title .arrow {
+  position: absolute;
+  left: 20px;
+  font-size: 23px;
+  color: #232323;
 }
 
 .adress {
@@ -73,7 +80,9 @@ h2 {
   background: linear-gradient(180deg, #FF79DA, #9356DC);
   padding: 20px;
   border-radius: 10rem;
+  border: hidden;
   box-shadow: 0 5px 10px #C3C3C3;
+  cursor: pointer;
   width: 60%;
 }
 .explore h2 {
@@ -153,6 +162,77 @@ h2 {
 }
 .card .fa-heart {
   font-size: 23px;
+}
+
+.visuel img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 257px;
+}
+.visuel .name {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 40px;
+  height: 76px;
+  margin-top: -38px;
+  border-radius: 38px 38px 0 0;
+  background-color: #F6F6F6;
+}
+.visuel .name i {
+  font-size: 23px;
+}
+
+.menus {
+  padding: 14px;
+  background-color: #F6F6F6;
+}
+.menus .menu {
+  margin-bottom: 20px;
+}
+.menus .menu_titre {
+  max-width: 100%;
+  padding-left: 6px;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.menus .barre {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  margin: 9px 0 9px 6px;
+}
+.menus .choix {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 22px 15px 10px;
+  border-radius: 13px;
+  background-color: white;
+  box-shadow: 1px 5px 5px #E6E6E6;
+  margin-bottom: 14px;
+}
+.menus .price {
+  display: flex;
+  align-self: flex-end;
+}
+.menus .check {
+  display: none;
+}
+.menus .pb {
+  display: flex;
+  justify-content: center;
+}
+.menus .pink_button {
+  color: white;
+  background: linear-gradient(180deg, #FF79DA, #9356DC);
+  padding: 20px;
+  border-radius: 10rem;
+  border: hidden;
+  box-shadow: 0 5px 10px #C3C3C3;
+  cursor: pointer;
+  width: 50%;
 }
 
 /*footer*/
