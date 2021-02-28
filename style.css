@@ -10,7 +10,13 @@ Copyright Johann Lamine
 }
 @font-face {
   font-family: "Roboto";
-  src: url(Font/Roboto-regular.ttf) format("truetype");
+  src: url(Font/Roboto-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-black";
+  src: url(Font/Roboto-Black.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -19,11 +25,18 @@ Copyright Johann Lamine
   margin: 0em;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   text-decoration: none;
+  color: black;
 }
 
 /*header*/
 h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-family: "Roboto-black";
+  padding: 20px 0;
 }
 
 .title {
@@ -53,6 +66,7 @@ h1 {
   text-align: center;
   justify-content: space-evenly;
   min-height: 286px;
+  padding: 0 40px;
 }
 .explore .pink_button {
   color: white;
@@ -60,7 +74,10 @@ h1 {
   padding: 20px;
   border-radius: 10rem;
   box-shadow: 0 5px 10px #C3C3C3;
-  width: 50%;
+  width: 60%;
+}
+.explore h2 {
+  padding: 20px 20px;
 }
 
 #Section2 {
@@ -107,18 +124,55 @@ h1 {
 
 .card {
   position: relative;
+  background: white;
   width: 100%;
   height: 250px;
+  border-radius: 15px;
+  margin-bottom: 18px;
+  box-shadow: 1px 5px 5px #E6E6E6;
 }
 .card .new {
   position: absolute;
+  top: 13px;
+  right: 10px;
   background: #99E2D0;
   color: #1b6150;
+  padding: 9px;
 }
 .card img {
   object-fit: cover;
   width: 100%;
+  border-radius: 15px 15px 0px 0px;
   max-height: 174px;
+}
+.card .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 0 15px;
+}
+.card .fa-heart {
+  font-size: 23px;
+}
+
+/*footer*/
+footer {
+  padding: 20px 20px;
+  background: #CACACA;
+  filter: invert(1);
+}
+footer i {
+  float: left;
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+}
+footer ul {
+  list-style-type: none;
+  padding-top: 20px;
+}
+footer li {
+  padding: 5px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
