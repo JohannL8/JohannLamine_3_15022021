@@ -198,9 +198,6 @@ h2 {
   text-transform: uppercase;
   font-weight: lighter;
 }
-.menus .menu:hover .check {
-  display: contents;
-}
 .menus .barre {
   width: 40px;
   height: 3px;
@@ -215,6 +212,10 @@ h2 {
   background-color: white;
   box-shadow: 1px 5px 5px #E6E6E6;
   margin-bottom: 14px;
+  cursor: pointer;
+}
+.menus .choix:active .check {
+  display: contents;
 }
 .menus .price {
   display: flex;
@@ -237,6 +238,18 @@ h2 {
   box-shadow: 0 5px 10px #C3C3C3;
   cursor: pointer;
   width: 50%;
+}
+.menus .text {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menus .text h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menus .text p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /*footer*/
