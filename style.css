@@ -85,6 +85,9 @@ h2 {
   cursor: pointer;
   width: 60%;
 }
+.explore .pink_button:hover {
+  opacity: 0.8;
+}
 .explore h2 {
   padding: 20px 20px;
 }
@@ -213,29 +216,31 @@ h2 {
   box-shadow: 1px 5px 5px #E6E6E6;
   margin-bottom: 14px;
   cursor: pointer;
+  overflow: hidden;
 }
-.menus .choix:hover .check {
-  display: contents;
+.menus .choix .check {
+  margin-right: -65px;
+  background-color: #99E2D0;
+  transition-duration: 500ms;
+  margin: -34px -87px -20px 20px;
+  background-color: #99E2D0;
 }
-.menus .choix:hover .check i {
+.menus .choix .check i {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 72px;
   width: 65px;
-  margin: -34px -22px -20px 20px;
-  border-radius: 0 13px 13px 0;
   font-size: 1.3rem;
   color: white;
-  background-color: #99E2D0;
+}
+.menus .choix:hover .check {
+  margin-right: -22px;
 }
 .menus .price {
   display: flex;
   align-self: flex-end;
   margin-left: 20px;
-}
-.menus .check {
-  display: none;
 }
 .menus .pb {
   display: flex;
@@ -251,6 +256,9 @@ h2 {
   box-shadow: 0 5px 10px #C3C3C3;
   cursor: pointer;
   width: 50%;
+}
+.menus .pink_button:hover {
+  opacity: 0.8;
 }
 .menus .text {
   white-space: nowrap;
