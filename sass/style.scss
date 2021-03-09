@@ -227,15 +227,28 @@ h2 {
         box-shadow: 1px 5px 5px #E6E6E6;
         margin-bottom: 14px;
         cursor: pointer;
-        &:active {
+        &:hover {
             .check {
                 display: contents;
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 72px;
+                    width: 65px;
+                    margin: -34px -22px -20px 20px;
+                    border-radius: 0 13px 13px 0;
+                    font-size: 1.3rem;
+                    color: white;
+                    background-color: $tertiary;
+                }
             }
         }
     }
     .price {
         display: flex;
         align-self: flex-end;
+        margin-left: 20px;
     }
     .check {
         display: none;

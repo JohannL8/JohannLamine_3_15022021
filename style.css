@@ -214,12 +214,25 @@ h2 {
   margin-bottom: 14px;
   cursor: pointer;
 }
-.menus .choix:active .check {
+.menus .choix:hover .check {
   display: contents;
+}
+.menus .choix:hover .check i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  width: 65px;
+  margin: -34px -22px -20px 20px;
+  border-radius: 0 13px 13px 0;
+  font-size: 1.3rem;
+  color: white;
+  background-color: #99E2D0;
 }
 .menus .price {
   display: flex;
   align-self: flex-end;
+  margin-left: 20px;
 }
 .menus .check {
   display: none;
