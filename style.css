@@ -2,6 +2,14 @@
 ----------------------------
 Copyright Johann Lamine
 */
+@keyframes spin {
+  from {
+    transform: rotate(100deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url(Font/Shrikhand-Regular.ttf) format("truetype");
@@ -163,8 +171,22 @@ h2 {
   justify-content: space-between;
   padding: 10px 20px 0 15px;
 }
-.card .fa-heart {
+
+.heart {
   font-size: 23px;
+}
+.heart .fas {
+  display: none;
+}
+.heart:hover .fas {
+  display: block;
+  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart:hover .far {
+  display: none;
 }
 
 .visuel img {
@@ -236,6 +258,9 @@ h2 {
 }
 .menus .choix:hover .check {
   margin-right: -22px;
+}
+.menus .choix:hover .fa-check-circle {
+  animation: spin 300ms 100ms linear;
 }
 .menus .price {
   display: flex;

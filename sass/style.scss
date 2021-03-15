@@ -8,6 +8,7 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $background: #F6F6F6;
 
+
 @mixin pinkb {
     color: white;
     background: linear-gradient(180deg, $secondary, $primary);
@@ -23,7 +24,14 @@ $background: #F6F6F6;
     padding: 9px;
     
 }
-
+@keyframes spin {
+    from {
+        transform: rotate(100deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 @font-face {
     font-family: 'Shrikhand';
     src: url(Font/Shrikhand-Regular.ttf) format('truetype');
@@ -176,9 +184,26 @@ h2 {
         justify-content: space-between;
         padding: 10px 20px 0 15px;
     }
-    .fa-heart {
-        font-size: 23px;
+    
+}
+.heart {
+    font-size: 23px;
+    .fas {
+        display: none;
     }
+    &:hover {
+        .fas {
+            display: block;
+            color: $primary;
+            background: -webkit-linear-gradient($primary, $secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .far {
+            display: none;
+        }
+    }
+
 }
 .visuel {
     img {
@@ -245,12 +270,14 @@ h2 {
                 width: 65px;
                 font-size: 1.3rem;
                 color: white;
-
             }
         }
         &:hover {
             .check {
                 margin-right: -22px;
+            }
+            .fa-check-circle {
+                animation: spin 300ms 100ms linear;
             }
         }
     }
