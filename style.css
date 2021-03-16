@@ -45,6 +45,7 @@ h1 {
 h2 {
   font-family: "Roboto-black";
   padding: 30px 0;
+  width: 100%;
 }
 
 .title {
@@ -92,6 +93,7 @@ h2 {
   box-shadow: 0 5px 10px #C3C3C3;
   cursor: pointer;
   width: 60%;
+  max-width: 300px;
 }
 .explore .pink_button:hover {
   opacity: 0.8;
@@ -102,6 +104,13 @@ h2 {
 
 #Section2 {
   padding: 20px 20px 50px 20px;
+}
+@media (min-width: 1170px) {
+  #Section2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .fonction {
@@ -141,6 +150,13 @@ h2 {
   padding: 20px 20px 50px 20px;
   height: auto;
 }
+@media (min-width: 1170px) {
+  #Section3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 
 .card {
   position: relative;
@@ -171,6 +187,11 @@ h2 {
   justify-content: space-between;
   padding: 10px 20px 0 15px;
 }
+@media (min-width: 1170px) {
+  .card {
+    width: 45%;
+  }
+}
 
 .heart {
   font-size: 23px;
@@ -182,6 +203,7 @@ h2 {
   display: block;
   color: #9356DC;
   background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

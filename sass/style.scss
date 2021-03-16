@@ -71,6 +71,7 @@ h1 {
 h2 {
     font-family: 'Roboto-black';
     padding: 30px 0;
+    width: 100%;
 }
 .title {
     display: flex;
@@ -109,6 +110,7 @@ h2 {
     .pink_button {
         @include pinkb;
         width: 60%;
+        max-width: 300px;
         &:hover {
             opacity:0.8;
         }
@@ -120,6 +122,11 @@ h2 {
 }
 #Section2 {
     padding: 20px 20px 50px 20px;
+    @media (min-width:1170px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 .fonction {
     display: flex;
@@ -157,6 +164,11 @@ h2 {
     background: $background;
     padding: 20px 20px 50px 20px;
     height: auto;
+    @media (min-width:1170px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 .card {
     position: relative;
@@ -184,7 +196,9 @@ h2 {
         justify-content: space-between;
         padding: 10px 20px 0 15px;
     }
-    
+    @media (min-width:1170px) {
+        width: 45%;
+    }
 }
 .heart {
     font-size: 23px;
@@ -196,6 +210,7 @@ h2 {
             display: block;
             color: $primary;
             background: -webkit-linear-gradient($primary, $secondary);
+            background-clip: content-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
