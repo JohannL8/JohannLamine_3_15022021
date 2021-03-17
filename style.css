@@ -74,6 +74,21 @@ h2 {
   margin-right: 18px;
 }
 
+@media (min-width: 1150px) {
+  .contain {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .contain--foot {
+    display: block;
+    max-width: 1300px;
+  }
+}
+
 .explore {
   background-color: #F6F6F6;
   display: flex;
@@ -216,6 +231,15 @@ h2 {
   width: 100%;
   max-height: 257px;
 }
+@media (min-width: 1150px) {
+  .visuel img {
+    max-height: 400px;
+    max-width: 1328px;
+    display: block;
+    margin: auto;
+    border-radius: 38px 38px 0 0;
+  }
+}
 .visuel .name {
   display: flex;
   align-items: center;
@@ -231,10 +255,23 @@ h2 {
 .visuel .name i {
   font-size: 23px;
 }
+@media (min-width: 1150px) {
+  .visuel .name {
+    max-width: 1268px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .menus {
   padding: 14px;
   background-color: #F6F6F6;
+}
+@media (min-width: 1150px) {
+  .menus {
+    max-width: 1300px;
+    margin: auto;
+  }
 }
 .menus .menu {
   margin-bottom: 50px;
@@ -244,6 +281,11 @@ h2 {
   padding-left: 6px;
   text-transform: uppercase;
   font-weight: lighter;
+}
+@media (min-width: 1150px) {
+  .menus .menu {
+    width: 30%;
+  }
 }
 .menus .barre {
   width: 40px;
@@ -303,6 +345,7 @@ h2 {
   box-shadow: 0 5px 10px #C3C3C3;
   cursor: pointer;
   width: 50%;
+  max-width: 400px;
 }
 .menus .pink_button:hover {
   opacity: 0.8;
