@@ -17,6 +17,7 @@ $background: #F6F6F6;
     border: hidden;
     box-shadow: 0 5px 10px #C3C3C3;
     cursor: pointer;
+    text-align: center;
 }
 @mixin new {
     background: $tertiary;

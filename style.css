@@ -222,6 +222,7 @@ h2 {
   border: hidden;
   box-shadow: 0 5px 10px #C3C3C3;
   cursor: pointer;
+  text-align: center;
   width: 60%;
   max-width: 300px;
 }
@@ -460,6 +461,7 @@ h2 {
   border: hidden;
   box-shadow: 0 5px 10px #C3C3C3;
   cursor: pointer;
+  text-align: center;
   width: 50%;
   max-width: 400px;
 }
