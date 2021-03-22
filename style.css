@@ -227,6 +227,7 @@ h2 {
 }
 .explore .pink_button:hover {
   opacity: 0.8;
+  box-shadow: 0 5px 10px #232323;
 }
 .explore h2 {
   padding: 20px 20px;
@@ -464,6 +465,7 @@ h2 {
 }
 .menus .pink_button:hover {
   opacity: 0.8;
+  box-shadow: 0 5px 10px #232323;
 }
 .menus .text {
   white-space: nowrap;
