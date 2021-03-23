@@ -341,6 +341,7 @@ h2 {
 
 .heart {
   font-size: 23px;
+  cursor: pointer;
 }
 .heart .fas {
   display: none;
@@ -528,6 +529,9 @@ footer ul {
 }
 footer li {
   padding: 5px 0;
+}
+footer li:hover {
+  text-shadow: 0 0 3px #000;
 }
 footer h1 {
   font-size: 1.3rem;
