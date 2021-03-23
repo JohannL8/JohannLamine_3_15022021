@@ -36,6 +36,15 @@ $background: #F6F6F6;
 @keyframes hide {
     to {visibility: hidden;}
 }
+@keyframes menu__pop {
+    0% { 
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    33% {
+      opacity: 0.5;
+    }
+  }
 @font-face {
     font-family: 'Shrikhand';
     src: url(Font/Shrikhand-Regular.ttf) format('truetype');
@@ -384,6 +393,20 @@ h2 {
         margin-bottom: 14px;
         cursor: pointer;
         overflow: hidden;
+        animation: menu__pop 1s ease-out both;
+            &--1 {
+                animation-delay: 200ms;
+            }
+            &--2 {
+                animation-delay: 400ms;
+            }
+            &--3 {
+                animation-delay: 600ms;
+            }
+            &--4 {
+                animation-delay: 800ms;
+            }
+
         .check {
             margin-right: -65px;
             background-color: $tertiary;
