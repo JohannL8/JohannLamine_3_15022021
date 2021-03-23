@@ -45,6 +45,11 @@ $background: #F6F6F6;
       opacity: 0.5;
     }
   }
+@keyframes heart__hover {
+    0% {
+        opacity: 0;
+    }
+}
 @font-face {
     font-family: 'Shrikhand';
     src: url(Font/Shrikhand-Regular.ttf) format('truetype');
@@ -316,6 +321,7 @@ h2 {
             background-clip: content-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: heart__hover 500ms ease-in-out both;
         }
         .far {
             display: none;
