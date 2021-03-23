@@ -1,0 +1,33 @@
+@keyframes spin {
+    from {
+        transform: rotate(100deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes hide {
+    to {visibility: hidden;}
+}
+@keyframes menu__pop {
+    0% { 
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    33% {
+      opacity: 0.5;
+    }
+  }
+@keyframes heart__hover {
+    0% {
+        opacity: 0;
+    }
+}
+@keyframes blur-text {
+	0% {filter: blur(0px);}
+	100% {filter: blur(3px);}
+}
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }

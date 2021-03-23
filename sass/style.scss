@@ -3,94 +3,17 @@
 Copyright Johann Lamine
 */
 
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$background: #F6F6F6;
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/keyframes";
+@import "base/fonts";
+@import "base/base";
 
-
-@mixin pinkb {
-    color: white;
-    background: linear-gradient(180deg, $secondary, $primary);
-    padding: 20px;
-    border-radius: 10rem;
-    border: hidden;
-    box-shadow: 0 5px 10px #C3C3C3;
-    cursor: pointer;
-    text-align: center;
-}
-@mixin new {
-    background: $tertiary;
-    color: darken($color: $tertiary, $amount: 50%);
-    padding: 9px;
-    
-}
-@keyframes spin {
-    from {
-        transform: rotate(100deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes hide {
-    to {visibility: hidden;}
-}
-@keyframes menu__pop {
-    0% { 
-      transform: translateY(30px);
-      opacity: 0;
-    }
-    33% {
-      opacity: 0.5;
-    }
-  }
-@keyframes heart__hover {
-    0% {
-        opacity: 0;
-    }
-}
-@font-face {
-    font-family: 'Shrikhand';
-    src: url(Font/Shrikhand-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url(Font/Roboto-Regular.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-black';
-    src: url(Font/Roboto-Black.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    padding: 0em;
-    margin: 0em;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    color: black;
-}
 
 /*loader*/
 
 
-@mixin position-center($text-align: center) {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-	text-align: $text-align;
-}
+
 .loader {
     animation: hide 0s ease-in 3s forwards;
 
@@ -129,10 +52,7 @@ $background: #F6F6F6;
 	}
 }
 
-@keyframes blur-text {
-	0% {filter: blur(0px);}
-	100% {filter: blur(3px);}
-}
+
 
 .loading-bar {
   @include position-center;
@@ -150,10 +70,7 @@ $background: #F6F6F6;
   border-radius: 15px;
   }
 }
-@keyframes load {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
+
 
 /*header*/
 

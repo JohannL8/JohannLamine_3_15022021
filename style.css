@@ -29,6 +29,22 @@ Copyright Johann Lamine
     opacity: 0;
   }
 }
+@keyframes blur-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(3px);
+  }
+}
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url(Font/Shrikhand-Regular.ttf) format("truetype");
@@ -126,14 +142,6 @@ Copyright Johann Lamine
   animation: blur-text 1s 1s 2 ease alternate;
 }
 
-@keyframes blur-text {
-  0% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(3px);
-  }
-}
 .loading-bar {
   position: absolute;
   top: 0;
@@ -157,14 +165,6 @@ Copyright Johann Lamine
   border-radius: 15px;
 }
 
-@keyframes load {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
 /*header*/
 h1 {
   font-family: "Shrikhand", Arial, Helvetica, sans-serif;
