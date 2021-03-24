@@ -8,68 +8,8 @@ Copyright Johann Lamine
 @import "utils/keyframes";
 @import "base/fonts";
 @import "base/base";
-
-
-/*loader*/
-
-
-
-.loader {
-    animation: hide 0s ease-in 3s forwards;
-
-}
-.loading {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #F6F6F6;
-	z-index: 9999;
-}
-
-.loading-text {
-	@include position-center;
-	width: 100%;
-	height: 100px;
-	line-height: 100px;
-	span {
-		display: inline-block;
-		padding: 0 6px;
-        color: #9356DC;
-		background: -webkit-linear-gradient(#9356DC, #FF79DA);
-        background-clip: content-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-family: 'Shrikhand', Arial;
-        font-size: 2rem;
-		@for $i from 0 through 7 {
-			&:nth-child(#{$i + 1}) {
-				filter: blur(0px);
-				animation: blur-text 1s (#{$i/7})+s 2 ease alternate;
-			}
-		}
-	}
-}
-
-
-
-.loading-bar {
-  @include position-center;
-  width: 90%;
-  max-width: 300px;
-  height: 20px;
-  background: #F6F6F6;
-  top: 100px;
-  border-radius: 20px;
-  &-value {
-  animation: load 3s ease forwards;
-  width: 50%;
-  height: 20px;
-  background: #99E2D0;
-  border-radius: 15px;
-  }
-}
+@import "layouts/loading";
+@import "layouts/footer";
 
 
 /*header*/
@@ -386,31 +326,5 @@ h2 {
             text-overflow: ellipsis;
             overflow: hidden;
         }
-    }
-}
-/*footer*/
-
-footer {
-    padding: 20px 20px;
-    background: #CACACA;
-    filter: invert(1);
-    i {
-        float: left;
-        width: 13px;
-        height: 13px;
-        margin-right: 10px;
-    }
-    ul {
-        list-style-type: none;
-        padding-top: 20px;
-    }
-    li {
-        padding: 5px 0;
-        &:hover {
-            text-shadow: 0 0 3px #000;
-        }        
-    }
-    h1 {
-        font-size: 1.3rem;
     }
 }

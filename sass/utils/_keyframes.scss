@@ -23,11 +23,16 @@
         opacity: 0;
     }
 }
-@keyframes blur-text {
-	0% {filter: blur(0px);}
-	100% {filter: blur(3px);}
-}
 @keyframes load {
     0% { width: 0; }
     100% { width: 100%; }
   }
+@keyframes opac {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes spiner {
+  100% {
+    transform:rotate(360deg);
+  }
+}

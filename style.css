@@ -29,20 +29,25 @@ Copyright Johann Lamine
     opacity: 0;
   }
 }
-@keyframes blur-text {
-  0% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(3px);
-  }
-}
 @keyframes load {
   0% {
     width: 0;
   }
   100% {
     width: 100%;
+  }
+}
+@keyframes opac {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spiner {
+  100% {
+    transform: rotate(360deg);
   }
 }
 @font-face {
@@ -71,12 +76,7 @@ Copyright Johann Lamine
   color: black;
 }
 
-/*loader*/
 .loader {
-  animation: hide 0s ease-in 3s forwards;
-}
-
-.loading {
   position: fixed;
   top: 0;
   left: 0;
@@ -84,11 +84,55 @@ Copyright Johann Lamine
   height: 100%;
   background: #F6F6F6;
   z-index: 9999;
+  animation: hide 0s ease-in 3s forwards;
+}
+
+.loading-spin {
+  animation: spiner 1s infinite linear;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #9356DC;
+  border-top-color: #9356DC;
+  box-sizing: border-box;
+  height: 20vmin;
+  left: calc(50% - 10vmin);
+  position: fixed;
+  top: calc(40% - 10vmin);
+  width: 20vmin;
+  z-index: 1;
+}
+.loading-spin:before {
+  animation: spiner 2s infinite linear;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #FF79DA;
+  border-top-color: #FF79DA;
+  box-sizing: border-box;
+  content: "";
+  height: 16vmin;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16vmin;
+}
+.loading-spin:after {
+  animation: spiner 3s infinite linear;
+  border: solid 2vmin transparent;
+  border-radius: 50%;
+  border-right-color: #99E2D0;
+  border-top-color: #99E2D0;
+  box-sizing: border-box;
+  content: "";
+  height: 12vmin;
+  left: 2vmin;
+  position: absolute;
+  top: 2vmin;
+  width: 12vmin;
 }
 
 .loading-text {
   position: absolute;
-  top: 0;
+  top: calc(20% - 10vmin);
   bottom: 0;
   left: 0;
   right: 0;
@@ -110,59 +154,41 @@ Copyright Johann Lamine
   font-size: 2rem;
 }
 .loading-text span:nth-child(1) {
-  filter: blur(0px);
-  animation: blur-text 1s 0s 2 ease alternate;
+  opacity: 0;
+  animation: opac 1s 0s 1 ease both;
 }
 .loading-text span:nth-child(2) {
-  filter: blur(0px);
-  animation: blur-text 1s 0.1428571429s 2 ease alternate;
+  opacity: 0;
+  animation: opac 1s 0.5s 1 ease both;
 }
 .loading-text span:nth-child(3) {
-  filter: blur(0px);
-  animation: blur-text 1s 0.2857142857s 2 ease alternate;
-}
-.loading-text span:nth-child(4) {
-  filter: blur(0px);
-  animation: blur-text 1s 0.4285714286s 2 ease alternate;
-}
-.loading-text span:nth-child(5) {
-  filter: blur(0px);
-  animation: blur-text 1s 0.5714285714s 2 ease alternate;
-}
-.loading-text span:nth-child(6) {
-  filter: blur(0px);
-  animation: blur-text 1s 0.7142857143s 2 ease alternate;
-}
-.loading-text span:nth-child(7) {
-  filter: blur(0px);
-  animation: blur-text 1s 0.8571428571s 2 ease alternate;
-}
-.loading-text span:nth-child(8) {
-  filter: blur(0px);
-  animation: blur-text 1s 1s 2 ease alternate;
+  opacity: 0;
+  animation: opac 1s 1s 1 ease both;
 }
 
-.loading-bar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  width: 90%;
-  max-width: 300px;
-  height: 20px;
-  background: #F6F6F6;
-  top: 100px;
-  border-radius: 20px;
+footer {
+  padding: 20px 20px;
+  background: #CACACA;
+  filter: invert(1);
 }
-.loading-bar-value {
-  animation: load 3s ease forwards;
-  width: 50%;
-  height: 20px;
-  background: #99E2D0;
-  border-radius: 15px;
+footer i {
+  float: left;
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+}
+footer ul {
+  list-style-type: none;
+  padding-top: 20px;
+}
+footer li {
+  padding: 5px 0;
+}
+footer li:hover {
+  text-shadow: 0 0 3px #000;
+}
+footer h1 {
+  font-size: 1.3rem;
 }
 
 /*header*/
@@ -509,32 +535,6 @@ h2 {
 .menus .text p {
   text-overflow: ellipsis;
   overflow: hidden;
-}
-
-/*footer*/
-footer {
-  padding: 20px 20px;
-  background: #CACACA;
-  filter: invert(1);
-}
-footer i {
-  float: left;
-  width: 13px;
-  height: 13px;
-  margin-right: 10px;
-}
-footer ul {
-  list-style-type: none;
-  padding-top: 20px;
-}
-footer li {
-  padding: 5px 0;
-}
-footer li:hover {
-  text-shadow: 0 0 3px #000;
-}
-footer h1 {
-  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
