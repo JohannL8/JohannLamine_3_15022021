@@ -1,0 +1,76 @@
+.loader {
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #F6F6F6;
+	z-index: 9999;
+    animation: hide 0s ease-in 3s forwards;
+
+}
+.loading-spin {
+    animation:spiner 1s infinite linear;
+    border:solid 2vmin transparent;
+    border-radius:50%;
+    border-right-color:$primary;
+    border-top-color:$primary;
+    box-sizing:border-box;
+    height:20vmin;
+    left:calc(50% - 10vmin);
+    position:fixed;
+    top:calc(40% - 10vmin);
+    width:20vmin;
+    z-index:1;
+    &:before {
+      animation:spiner 2s infinite linear;
+      border:solid 2vmin transparent;
+      border-radius:50%;
+      border-right-color:$secondary;
+      border-top-color:$secondary;
+      box-sizing:border-box;
+      content:"";
+      height:16vmin;
+      left:0;
+      position:absolute;
+      top:0;
+      width:16vmin;
+    }
+    &:after {
+      animation:spiner 3s infinite linear;
+      border:solid 2vmin transparent;
+      border-radius:50%;
+      border-right-color:$tertiary;
+      border-top-color:$tertiary;
+      box-sizing:border-box;
+      content:"";
+      height:12vmin;
+      left:2vmin;
+      position:absolute;
+      top:2vmin;
+      width:12vmin;
+    }
+}
+.loading-text {
+	@include position-center;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	span {
+		display: inline-block;
+		padding: 0 6px;
+        color: $primary;
+		background: -webkit-linear-gradient($primary, $secondary);
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Shrikhand', Arial;
+        font-size: 2rem;
+		@for $i from 0 through 2 {
+			&:nth-child(#{$i + 1}) {
+                opacity: 0;
+				animation: opac 1s (#{$i/2})+s 1 ease both;
+			}
+		}
+	}
+}

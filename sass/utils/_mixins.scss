@@ -1,0 +1,25 @@
+@mixin pinkb {
+    color: white;
+    background: linear-gradient(180deg, $secondary, $primary);
+    padding: 20px;
+    border-radius: 10rem;
+    border: hidden;
+    box-shadow: 0 5px 10px #C3C3C3;
+    cursor: pointer;
+    text-align: center;
+}
+@mixin new {
+    background: $tertiary;
+    color: darken($color: $tertiary, $amount: 50%);
+    padding: 9px;
+    
+}
+@mixin position-center($text-align: center) {
+	position: absolute;
+	top: calc(20% - 10vmin);
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: $text-align;
+}
